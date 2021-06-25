@@ -1,9 +1,13 @@
 from django.shortcuts import render
-
+from .models import Slider
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    slider= Slider.objects.all()
+    context={
+        'slider':slider
+    }
+    return render(request, 'index.html',context)
 
 def about(request):
     return render(request, 'about.html')
