@@ -13,3 +13,17 @@ class Slider(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+
+class HomeBestSellers(models.Model):
+    title= models.CharField('Title', max_length=127,null=True)
+    image = models.ImageField('Shekili', upload_to='bestsellers_image')
+    price= models.CharField('Qiymet hissesi', max_length=127)
+    
+
+    
+
+    def __str__(self):
+        return self.title
