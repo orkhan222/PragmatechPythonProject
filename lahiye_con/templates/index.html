@@ -7,7 +7,7 @@
             <div class="flexslider">
                 <ul class="slides">
                     {% for slider in slider %}
-                    <!-- <li style="background-image: url(' {% static "images/img_bg_1.jpg" %}');"> -->
+                    <li style="background-image: url({{slider.image}})">
                         <div class="overlay"></div>
                         <div class="container-fluid">
                             <div class="row">
@@ -16,7 +16,7 @@
                                         <div class="desc">
                                             <h1 class="head-1">{{slider.title}}</h1>
                                             <h2 class="head-2">{{slider.yazili}}</h2>
-                                            <h2 class="head-3">{{slider.price}}</h2>
+                                            <h2 class="head-3">{{slider.abc}}</h2>
                                             <p class="category"><span>{{slider.text2}}</span></p>
                                             <p><a href="#" class="btn btn-primary">Shop Collection</a></p>
                                         </div>
