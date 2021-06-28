@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import HomeBestSellers, Slider
+from .models import HomeBestSellers, MenViewProducts, Slider
 # Create your views here.
 
 def index(request):
@@ -31,7 +31,12 @@ def productDetail(request):
 
 
 def men(request):
-    return render(request, 'men.html')
+    viewproducts= MenViewProducts.objects.all()
+    context={
+        'viweproducts':viewproducts
+    }
+  
+    return render(request, 'men.html',context)
 
 def women(request):
     return render(request, 'women.html')  
