@@ -1,7 +1,6 @@
 from django.db import models
 
-# Create your models here.
-
+# Homenu Slider 
 class Slider(models.Model):
     title= models.CharField('Title', max_length=127,null=True)
     yazili = models.CharField('Yazili',max_length=127,null=True)
@@ -9,9 +8,19 @@ class Slider(models.Model):
     abc= models.CharField('Qiymet hissesi', max_length=127)
     text2 = models.CharField('Text2',max_length=127,null=True)
 
+
+    
+# Moderations
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
     def __str__(self):
         return self.title
 
+# Moderations
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 class HomeBestSellers(models.Model):
     title= models.CharField('Title', max_length=127,null=True)
