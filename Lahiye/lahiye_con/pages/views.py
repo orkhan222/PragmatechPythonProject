@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import HomeBestSellers, MenViewProducts, Slider
+from .models import HomeBestSeller, MenViewProduct, Slider
 # Create your views here.
 
 def index(request):
     slider= Slider.objects.all()
-    best= HomeBestSellers.objects.all()
+    best= HomeBestSeller.objects.all()
     context={
         'slider':slider,
         'best':best
@@ -31,7 +31,7 @@ def productDetail(request):
 
 
 def men(request):
-    viewproducts= MenViewProducts.objects.all()
+    viewproducts= MenViewProduct.objects.all()
     context={
         'viweproducts':viewproducts
     }
@@ -47,4 +47,3 @@ def wishlist(request):
 
 def checkout(request):
     return render(request, 'checkout.html')  
-

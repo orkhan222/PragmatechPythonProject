@@ -1,7 +1,9 @@
 from django.contrib import admin
-from . models import Slider,HomeBestSellers,MenViewProducts
+from . models import Slider,HomeBestSeller,MenViewProduct,Contact,About
 # Register your models here.
 
 admin.site.register(Slider)
-admin.site.register(HomeBestSellers)
-admin.site.register(MenViewProducts)
+admin.site.register(HomeBestSeller)
+admin.site.register(MenViewProduct)
+admin.site.register(Contact)
+admin.site.register(About)
