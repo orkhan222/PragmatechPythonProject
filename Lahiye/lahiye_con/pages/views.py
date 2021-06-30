@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import HomeBestSeller, MenViewProduct, Slider
+from .models import Contact, HomeBestSeller, MenViewProduct, Slider
 # Create your views here.
 
 def index(request):
@@ -17,7 +17,11 @@ def about(request):
     return render(request, 'about.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    ctc= Contact.objects.all()
+    context={
+        'ctc':ctc,
+    }
+    return render(request, 'contact.html',context)
     
 
 def cart(request):
