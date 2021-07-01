@@ -1,13 +1,15 @@
 from django.shortcuts import render
-from .models import Contact, HomeBestSeller, MenViewProduct, Slider
+from .models import Contact, Home, HomeBestSeller, MenViewProduct, Slider
 # Create your views here.
 
 def index(request):
     slider= Slider.objects.all()
     best= HomeBestSeller.objects.all()
+    home = Home.objects.all()
     context={
         'slider':slider,
-        'best':best
+        'best':best,
+        'home':home
     }
   
    

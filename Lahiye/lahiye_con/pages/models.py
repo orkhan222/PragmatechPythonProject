@@ -29,6 +29,26 @@ class Slider(models.Model):
     def __str__(self):
         return self.title
 
+class Home(models.Model):
+    title= models.CharField('Title', max_length=127,null=True)
+    image = models.ImageField('Shekili', upload_to='bestsellers_image')
+
+
+
+    # Moderations
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+    class Meta:
+        verbose_name='Home'
+        verbose_name_plural='Homes'
+        ordering=('-created_at',)
+
+
+    def __str__(self):
+        return self.title
+
 
 class HomeBestSeller(models.Model):
     title= models.CharField('Title', max_length=127,null=True)
