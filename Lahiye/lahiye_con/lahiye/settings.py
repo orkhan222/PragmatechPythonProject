@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages',
+   
 ]
 
 MIDDLEWARE = [
@@ -67,6 +69,24 @@ TEMPLATES = [
         },
     },
 ]
+
+
+# INSTALLED_APPS = (
+#     ...
+#     'jet.dashboard',
+#     'jet',
+#     'django.contrib.admin',
+#     ...
+# )
+
+# urlpatterns = patterns(
+#     '',
+#     url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
+#     url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
+#     url(r'^admin/', include(admin.site.urls)),
+#     ...
+# )
+
 
 WSGI_APPLICATION = 'lahiye.wsgi.application'
 
@@ -136,3 +156,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+
+
+

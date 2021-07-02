@@ -19,32 +19,13 @@
 						<div class="owl-carousel">
 							<div class="item">
 								<div class="product-entry border">
-									<a href="#" class="prod-img">
+									<a href="{% url 'productDetail' %}" class="prod-img">
 										<img src="{% static 'images/item-1.jpg' %}" class="img-fluid" alt="Free html5 bootstrap 4 template">
 									</a>
 								</div>
 							</div>
-							<div class="item">
-								<div class="product-entry border">
-									<a href="#" class="prod-img">
-										<img src="{% static 'images/item-2.jpg' %}" class="img-fluid" alt="Free html5 bootstrap 4 template">
-									</a>
-								</div>
-							</div>
-							<div class="item">
-								<div class="product-entry border">
-									<a href="#" class="prod-img">
-										<img src="{% static 'images/item-3.jpg' %}" class="img-fluid" alt="Free html5 bootstrap 4 template">
-									</a>
-								</div>
-							</div>
-							<div class="item">
-								<div class="product-entry border">
-									<a href="#" class="prod-img">
-										<img src="{% static 'images/item-4.jpg' %}" class="img-fluid" alt="Free html5 bootstrap 4 template">
-									</a>
-								</div>
-							</div>
+							
+	
 						</div>
 					</div>
 					<div class="col-sm-4">
@@ -106,7 +87,7 @@
                   	</div>
                   	<div class="row">
 	                  	<div class="col-sm-12 text-center">
-									<p class="addtocart"><a href="cart.html" class="btn btn-primary btn-addtocart"><i class="icon-shopping-cart"></i> Add to Cart</a></p>
+									<p class="addtocart"><a href="{% url 'cart' %}" class="btn btn-primary btn-addtocart"><i class="icon-shopping-cart"></i> Add to Cart</a></p>
 								</div>
 							</div>
 						</div>
