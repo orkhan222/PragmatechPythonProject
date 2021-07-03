@@ -15,4 +15,11 @@
 - Layihənin bitirilmə müddəti :21.08.2021
 
 
+*Layihə 03*
+- Layihənin adı : SmartEdu
+- Layihənin reposu :(https://github.com/orkhan222/SmartEdu)
+- Layihədə istifadə olunan texnologiyalar :HTML,CSS,JS,PYTHON(DJANGO)
+- Layihənin bitirilmə müddəti :03.08.2021
+
+
 
