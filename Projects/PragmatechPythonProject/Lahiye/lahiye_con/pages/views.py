@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import About, Contact, Home, HomeBestSeller, MenViewProduct, Slider
+from .models import About, Cart, Contact, Home, HomeBestSeller, MenViewProduct, Slider, TrustedPartner
 # Create your views here.
 
 def index(request):
@@ -31,7 +31,12 @@ def contact(request):
     
 
 def cart(request):
-    return render(request, 'cart.html')
+    cart=Cart.objects.all()
+    context={
+        'cart':cart,
+    }
+
+    return render(request, 'cart.html',context)
     
 def order(request):
     return render(request, 'order.html')
@@ -49,7 +54,12 @@ def men(request):
     return render(request, 'men.html',context)
 
 def women(request):
-    return render(request, 'women.html')  
+    trust =TrustedPartner.objects.all()
+    context={
+        'trustedpartner':trust
+    }
+  
+    return render(request, 'women.html',context)  
 
 
 def wishlist(request):

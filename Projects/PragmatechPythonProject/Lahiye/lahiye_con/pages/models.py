@@ -255,3 +255,28 @@ class About(models.Model):
 
     def __str__(self):
         return self.title
+
+
+# -----------------------------------------------------------------------Cart--------------------------------------------------------------------------------------------
+
+class Cart(models.Model):
+    title= models.CharField('Title', max_length=127,null=True)
+    image = models.ImageField('Shekili', upload_to='cart_image')
+    text= models.TextField('Text', null=True)
+    price=models.CharField('PRICE',max_length=127,null=True)
+    quantity=models.CharField('QUANTITY',max_length=127,null=True)
+    total=models.CharField('TOTAL',max_length=127,null=True)
+
+
+     # Moderations
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+    class Meta:
+        verbose_name='Cart'
+        verbose_name_plural='carts'
+        ordering=('-created_at',)
+
+    def __str__(self):
+        return self.title

@@ -52,17 +52,20 @@
 								<span>Remove</span>
 							</div>
 						</div>
+						{% for cart in cart %}
+						
+						
 						<div class="product-cart d-flex">
 							<div class="one-forth">
 								<div class="product-img" style="background-image: url(images/item-6.jpg);">
 								</div>
 								<div class="display-tc">
-									<h3>Product Name</h3>
+									<h3>{{cart.title}}</h3>
 								</div>
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$68.00</span>
+									<span class="price">{{cart.price}}</span>
 								</div>
 							</div>
 							<div class="one-eight text-center">
@@ -72,7 +75,7 @@
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$120.00</span>
+									<span class="price">{{cart.total}}</span>
 								</div>
 							</div>
 							<div class="one-eight text-center">
@@ -81,6 +84,7 @@
 								</div>
 							</div>
 						</div>
+						{% endfor %}
 						<div class="product-cart d-flex">
 							<div class="one-forth">
 								<div class="product-img" style="background-image: url(images/item-7.jpg );">
