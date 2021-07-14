@@ -15,15 +15,14 @@ class Slider(models.Model):
 
 
     
-# Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+
+    
 
 
     class Meta:
         verbose_name='Slider'
         verbose_name_plural='Sliders'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
 
     def __str__(self):
@@ -36,14 +35,14 @@ class Home(models.Model):
 
 
     # Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
         verbose_name='Home'
         verbose_name_plural='Homes'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
 
     def __str__(self):
@@ -58,14 +57,14 @@ class HomeBestSeller(models.Model):
 
 
     # Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
         verbose_name='HomeBestSeller'
         verbose_name_plural='HomeBestSellers'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
 
     def __str__(self):
@@ -80,14 +79,14 @@ class MenSlider(models.Model):
 
 
     # Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
         verbose_name='MenSlider'
         verbose_name_plural='MenSliders'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
 
     def __str__(self):
@@ -103,14 +102,14 @@ class MenShopNow(models.Model):
 
 
     # Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
         verbose_name='MenShopNow'
         verbose_name_plural='MenShopNow'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
 
     def __str__(self):
@@ -126,14 +125,14 @@ class MenViewProduct(models.Model):
 
 
      # Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
         verbose_name='MenViewProduct'
         verbose_name_plural='MenViewProducts'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
     def __str__(self):
         return self.title
@@ -151,14 +150,14 @@ class WomenSlider(models.Model):
 
 
     # Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
         verbose_name='WomenSlider'
         verbose_name_plural='WomenSliders'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
 
     def __str__(self):
@@ -174,14 +173,14 @@ class WomenShopNow(models.Model):
 
 
     # Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
         verbose_name='WomenShopNow'
         verbose_name_plural='WomenShopNow'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
 
     def __str__(self):
@@ -196,15 +195,15 @@ class TrustedPartner(models.Model):
     price= models.CharField('Qiymet hissesi', max_length=127)
 
 
-     # Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    #  # Moderations
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
         verbose_name='TrustedPartner'
         verbose_name_plural='TrustedPartners'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
     def __str__(self):
         return self.title
@@ -222,15 +221,15 @@ class Contact(models.Model):
 
 
 
-     # Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    #  # Moderations
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
         verbose_name='Contact'
         verbose_name_plural='Contacts'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
     def __str__(self):
         return self.name
@@ -243,15 +242,15 @@ class About(models.Model):
     text= models.TextField('Text', null=True)
 
 
-     # Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    #  # Moderations
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
         verbose_name='About'
         verbose_name_plural='Abouts'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
     def __str__(self):
         return self.title
@@ -268,15 +267,15 @@ class Cart(models.Model):
     total=models.CharField('TOTAL',max_length=127,null=True)
 
 
-     # Moderations
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    #  # Moderations
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
         verbose_name='Cart'
         verbose_name_plural='carts'
-        ordering=('-created_at',)
+        # ordering=('-created_at',)
 
     def __str__(self):
         return self.title
