@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.db.models.deletion import CASCADE
 from . models import Slider,HomeBestSeller,MenViewProduct,Contact,About,Home,MenSlider,MenShopNow,WomenSlider,TrustedPartner,WomenShopNow,Cart
+
 # Register your models here.
 
 admin.site.register(Slider)
@@ -15,3 +16,8 @@ admin.site.register(WomenSlider)
 admin.site.register(WomenShopNow)
 admin.site.register(TrustedPartner)
 admin.site.register(Cart)
+
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('full_name',)
+
+admin.site.register(Contact,ContactAdmin)

@@ -1,17 +1,36 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import About, Cart, Contact, Home, HomeBestSeller, MenViewProduct, Slider, TrustedPartner
 # Create your views here.
+from django.forms import forms
+from .forms import  ContactForm
+from django.contrib import messages
 
 def index(request):
     slider= Slider.objects.all()
     best= HomeBestSeller.objects.all()
     home = Home.objects.all()
+    
+    form=ContactForm()
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            full_name = request.POST.get('full_name')
+            email = request.POST.get('email')
+            subject = request.POST.get('subject')
+            message = request.POST.get('message')
+            form = Contact(full_name=full_name,email=email, subject=subject, message=message)
+            form.save()
+            messages.success(request, 'Mesaj gonderildi...')
+
+            return redirect ('index')
+
     context={
         'slider':slider,
         'best':best,
-        'home':home
+        'home':home,
+        'form':form,
     }
-  
+
    
     return render(request, 'index.html',context)
 

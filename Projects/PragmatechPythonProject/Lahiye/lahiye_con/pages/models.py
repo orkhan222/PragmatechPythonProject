@@ -213,26 +213,26 @@ class TrustedPartner(models.Model):
 
 # ------------------------------------Contact------------------------------------------------------
 class Contact(models.Model):
-    name= models.CharField('Name', max_length=127,null=True)
-    surname = models.CharField('Surname',max_length=127,null=True)
-    number= models.CharField('Number', max_length=127)
-    email = models.EmailField('E-mail',null=True)
-    message= models.TextField('Message',null=True)
-
-
-
-    #  # Moderations
-    # created_at = models.DateTimeField(auto_now_add=True)
-    # updated_at = models.DateTimeField(auto_now=True)
-
-
-    class Meta:
-        verbose_name='Contact'
-        verbose_name_plural='Contacts'
-        # ordering=('-created_at',)
+    full_name = models.CharField(blank=True, null=True, max_length=150)
+    surname = models.CharField(blank=True, null=True, max_length=150)
+    email = models.EmailField(blank=True, null=True, max_length=150)
+    number = models.CharField(blank=True, null=True, max_length=150)
+    message = models.TextField(blank=True, null=True, help_text='Send your message', max_length=150)
 
     def __str__(self):
-        return self.name
+        return self.full_name
+
+    # moderetion
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
+    # published = models.BooleanField('Is published' , default=True)
+    class Meta:
+        verbose_name = 'Contact'
+        verbose_name_plural = "Contacts"
+        # ordering = ('-created_at',)
+
+    def __str__(self):
+        return self.full_name
 
 
 # --------------------------------------------------About----------------------------------------------------
