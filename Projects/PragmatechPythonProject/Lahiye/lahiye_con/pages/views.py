@@ -15,10 +15,11 @@ def index(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             full_name = request.POST.get('full_name')
+            surname = request.POST.get('surname')
             email = request.POST.get('email')
-            subject = request.POST.get('subject')
             message = request.POST.get('message')
-            form = Contact(full_name=full_name,email=email, subject=subject, message=message)
+            number= request.POST.get('number')
+            form = Contact(full_name=full_name,email=email, number=number, surname=surname, message=message)
             form.save()
             messages.success(request, 'Mesaj gonderildi...')
 

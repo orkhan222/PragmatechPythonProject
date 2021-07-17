@@ -7,11 +7,12 @@ class ContactForm(forms.Form):
         'placeholder': 'full_name'
     }))
 
-    class ContactForm(forms.Form):
-        surname = forms.CharField(label="Your surname",widget=forms.TextInput(attrs={
+    surname = forms.CharField(label="Your surname",widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'surname'
     }))
+
+
 
     email = forms.EmailField(label="Your email",widget=forms.EmailInput(attrs={
         'class': 'form-control',
