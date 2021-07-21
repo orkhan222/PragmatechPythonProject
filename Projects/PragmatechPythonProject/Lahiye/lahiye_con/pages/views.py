@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import About, Cart, Contact, Home, HomeBestSeller, MenViewProduct, Slider, TrustedPartner
+from .models import About, Cart, Contact, Home, HomeBestSeller, MenViewProduct, Slider, TrustedPartner,Related
 # Create your views here.
 from django.forms import forms
 from .forms import  ContactForm
@@ -9,7 +9,6 @@ def index(request):
     slider= Slider.objects.all()
     best= HomeBestSeller.objects.all()
     home = Home.objects.all()
-    
     form=ContactForm()
     if request.method == "POST":
         form = ContactForm(request.POST)
@@ -52,8 +51,10 @@ def contact(request):
 
 def cart(request):
     cart=Cart.objects.all()
+    related=Related.objects.all()
     context={
         'cart':cart,
+        'related':related
     }
 
     return render(request, 'cart.html',context)

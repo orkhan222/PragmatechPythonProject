@@ -37,38 +37,40 @@
 					<div class="col-md-6">
 						<div class="contact-wrap">
 							<h3>Get In Touch</h3>
-							<form action="#" class="contact-form">
+							<form action="{% url 'contact' %}" method="POST" class="contact-form">
+								{% csrf_token %}
+								{{forms.as_p}}
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="fname">Ad</label>
-											<input type="text" name="full_name"  id="fname" class="form-control" placeholder="Your firstname">
+											{{forms.full_name}}
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="lname">Soyad</label>
-											{<input type="text" id="lname" name="surname"  class="form-control" placeholder="Your lastname">}
+											{{forms.surname}}
 										</div>
 									</div>
 									<div class="w-100"></div>
 									<div class="col-sm-12">
 										<div class="form-group">
 											<label for="email">Email</label>
-											<input type="text" id="email" name="email"  class="form-control" placeholder="Your email address">
+											{{forms.email}}
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="Phone">Phone Number</label>
-											<input type="text" id="zippostalcode" name="number"  class="form-control" placeholder="Number">
+											{{forms.number}}
 										</div>
 									</div>
 									<div class="w-100"></div>
 									<div class="col-sm-12">
 										<div class="form-group">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" name="message"  cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+											{{forms.message}}
 										</div>
 									</div>
 									

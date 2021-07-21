@@ -220,9 +220,6 @@ class Contact(models.Model):
     number = models.CharField(blank=True, null=True, max_length=150)
     message = models.TextField(blank=True, null=True, help_text='Send your message', max_length=150)
 
-    def __str__(self):
-        return self.full_name
-
     # moderetion
     # created_at = models.DateTimeField(auto_now_add=True)
     # updated_at = models.DateTimeField(auto_now=True)
@@ -276,6 +273,26 @@ class Cart(models.Model):
     class Meta:
         verbose_name='Cart'
         verbose_name_plural='carts'
+        # ordering=('-created_at',)
+
+    def __str__(self):
+        return self.title
+
+# -------------------------------------------------CartRelated-----------------------------------------------------------
+class Related(models.Model):
+    title= models.CharField('Title', max_length=127,null=True)
+    image = models.ImageField('Shekili', upload_to='cartrelated_image')
+    price= models.CharField('Qiymet hissesi', max_length=127)
+
+
+    # Moderations
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
+
+
+    class Meta:
+        verbose_name='CartRelated'
+        verbose_name_plural='CartRelateds'
         # ordering=('-created_at',)
 
     def __str__(self):
