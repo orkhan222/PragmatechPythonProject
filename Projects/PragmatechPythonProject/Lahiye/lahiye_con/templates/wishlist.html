@@ -53,79 +53,22 @@
 						</div>
 
 
+<!-- 
 
-
+						{% for y in i %}
+						
+						
 						<div class="product-cart d-flex">
 							<div class="one-forth">
 								<div class="product-img" style="background-image: url(images/item-6.jpg);">
 								</div>
 								<div class="display-tc">
-									<h3>Product Name</h3>
+									<h3>{{y.title}}</h3>
 								</div>
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$68.00</span>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<span class="price">$120.00</span>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<a href="#" class="closed"></a>
-								</div>
-							</div>
-						</div>
-						<div class="product-cart d-flex">
-							<div class="one-forth">
-								<div class="product-img" style="background-image: url(images/item-7.jpg);">
-								</div>
-								<div class="display-tc">
-									<h3>Product Name</h3>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<span class="price">$68.00</span>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<form action="#">
-										<input type="text" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
-									</form>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<span class="price">$120.00</span>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<a href="#" class="closed"></a>
-								</div>
-							</div>
-						</div>
-						<div class="product-cart d-flex">
-							<div class="one-forth">
-								<div class="product-img" style="background-image: url(images/item-8.jpg);">
-								</div>
-								<div class="display-tc">
-									<h3>Product Name</h3>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<span class="price">$68.00</span>
+									<span class="price">{{y.price}}</span>
 								</div>
 							</div>
 							<div class="one-eight text-center">
@@ -135,7 +78,7 @@
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$120.00</span>
+									<span class="price">{{y.total}}</span>
 								</div>
 							</div>
 							<div class="one-eight text-center">
@@ -144,6 +87,8 @@
 								</div>
 							</div>
 						</div>
+						{% endfor %}
+						
 					</div>
 				</div>
 				<div class="row">
@@ -151,6 +96,9 @@
 						<h2>Shop more</h2>
 					</div>
 				</div>
+				{% for shopmore in shopmore %}
+				
+			
 				<div class="row">
 					<div class="col-md-3 col-lg-3 mb-4 text-center">
 						<div class="product-entry border">
@@ -158,23 +106,16 @@
 								<img src="{% static 'images/item-1.jpg' %}" class="img-fluid" alt="Free html5 bootstrap 4 template">
 							</a>
 							<div class="desc">
-								<h2><a href="#">Women's Boots Shoes Maca</a></h2>
-								<span class="price">$139.00</span>
+								<h2><a href="{% url 'productDetail' %}">{{shopmore.title}}</a></h2>
+								<span class="price">{{shopmore.price}}</span>
 							</div>
 						</div>
 					</div>
-					<
-					<div class="col-md-3 col-lg-3 mb-4 text-center">
-						<div class="product-entry border">
-							<a href="{% url 'productDetail' %}" class="prod-img">
-								<img src="{% static 'images/item-3.jpg' %}" class="img-fluid" alt="Free html5 bootstrap 4 template">
-							</a>
-							<div class="desc">
-								<h2><a href="{% url 'productDetail' %}">Men's Taja Commissioner</a></h2>
-								<span class="price">$139.00</span>
-							</div>
-						</div>
+					
 					</div>
+					{% endfor %} -->
+					
+					
 				</div>
 			</div>
 		</div>

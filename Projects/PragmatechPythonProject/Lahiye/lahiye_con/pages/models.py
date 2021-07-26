@@ -297,3 +297,46 @@ class Related(models.Model):
 
     def __str__(self):
         return self.title
+
+# ----------------------------------Prooductssssssssssssssss-------------------------------------------
+class Product(models.Model):
+    title= models.CharField('Title', max_length=127,null=True)
+    image = models.ImageField('Shekili', upload_to='product_image')
+    text= models.TextField('Text', null=True)
+    price=models.CharField('PRICE',max_length=127,null=True)
+    quantity=models.CharField('QUANTITY',max_length=127,null=True)
+    total=models.CharField('TOTAL',max_length=127,null=True)
+
+
+    #  # Moderations
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
+
+
+    class Meta:
+        verbose_name='Product '
+        verbose_name_plural='Products'
+        # ordering=('-created_at',)
+
+    def __str__(self):
+        return self.title
+
+# -------------------------------------------------ShopMore-----------------------------------------------------------
+class ShopMore(models.Model):
+    title= models.CharField('Title', max_length=127,null=True)
+    image = models.ImageField('Shekili', upload_to='shopmore_image')
+    price= models.CharField('Qiymet hissesi', max_length=127)
+
+
+    # Moderations
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
+
+
+    class Meta:
+        verbose_name='ShopMore'
+        verbose_name_plural='ShopMores'
+        # ordering=('-created_at',)
+
+    def __str__(self):
+        return self.title
