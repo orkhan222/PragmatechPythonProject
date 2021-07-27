@@ -84,14 +84,14 @@ def women(request):
 
 
 def wishlist(request):
-    i=Product.objects.all()
-    shop=ShopMore.objects.all()
-    context={
-        'i':i,
-        'shop':shop
-    }
+    # i=Product.objects.all()
+    # shop=ShopMore.objects.all()
+    # context={
+    #     'i':i,
+    #     'shop':shop
+    # }
 
-    return render(request, 'wishlist.html',context)  
+    return render(request, 'wishlist.html')  
 
 def checkout(request):
     return render(request, 'checkout.html')  
